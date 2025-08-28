@@ -24,7 +24,7 @@ if ($_POST) {
 ?>
 <?php if ($error)
   echo '<p style="color:red">' . htmlspecialchars($error, ENT_QUOTES, 'UTF-8') . '</p>'; ?>
-<h3>Comment lists : </h3>
+<h3>Comment listss : </h3>
 <?php
 foreach ($GLOBALS['PDO']->query("SELECT * FROM comments ORDER BY id DESC") as $row) {
   echo "<p><b>" . htmlspecialchars($row['author'], ENT_QUOTES, 'UTF-8') . "</b>: " . htmlspecialchars($row['content'], ENT_QUOTES, 'UTF-8') . "</p>";
